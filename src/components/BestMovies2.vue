@@ -326,6 +326,7 @@
               :key="key"
               class="col-sm-12 col-md-6 col-lg-4 mx-auto my-2"
               @click="mostrar(movie.id)"
+              style="cursor: pointer"
             >
               <div class="card p-2">
                 <img
@@ -347,6 +348,7 @@
               :key="key"
               class="col-sm-12 col-md-6 col-lg-4 mx-auto my-2"
               @click="mostrar(movie.id)"
+              style="cursor: pointer"
             >
               <div class="card p-2">
                 <img
@@ -510,6 +512,7 @@
               :key="key"
               class="col-sm-12 col-md-6 col-lg-4 mx-auto my-2"
               @click="mostrar(movie.id)"
+              style="cursor: pointer"
             >
               <div class="card p-2">
                 <img
@@ -531,6 +534,7 @@
               :key="key"
               class="col-sm-12 col-md-6 col-lg-4 mx-auto my-2"
               @click="mostrar(movie.id)"
+              style="cursor: pointer"
             >
               <div class="card p-2">
                 <img

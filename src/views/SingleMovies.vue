@@ -366,6 +366,10 @@
   </div>
 </template>
 <script>
+let baseurl = "https://api.themoviedb.org/3/movie/"
+let similar = "/similar"
+let apikey = "?api_key=9cce8ac649022e53376ee7864fe9a772"
+let language = "&language=en-US"
 import axios from "axios";
 export default {
   name: "SingleMovies",
@@ -381,9 +385,13 @@ export default {
     async getsimilarmovies() {
       this.movieid = this.$route.params.id;
       const response = await axios.get(
-        "https://api.themoviedb.org/3/movie/" +
+        `${baseurl}` +
           this.movieid +
-          "/similar?api_key=9cce8ac649022e53376ee7864fe9a772&language=en-US&page=1"
+          `${similar}${apikey}${language}`,{
+            params: {
+              page: 1
+            }
+          }
       );
       this.movie2 = response.data.results;
       console.log(this.movie2);
@@ -403,9 +411,9 @@ export default {
     this.movieid = this.$route.params.id;
     axios
       .get(
-        "https://api.themoviedb.org/3/movie/" +
+        `${baseurl}` +
           this.movieid +
-          "?api_key=9cce8ac649022e53376ee7864fe9a772&language=en-US"
+          `${apikey}${language}`
       )
       .then((datos) => {
         this.movie = datos.data;

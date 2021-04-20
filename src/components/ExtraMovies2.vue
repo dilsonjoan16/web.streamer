@@ -392,7 +392,7 @@
               v-for="(movie2, key) in movies2"
               :key="key"
               class="col-sm-12 col-md-6 col-lg-4 mx-auto my-2"
-              @click="mostrar(movie.id)"
+              @click="mostrar(movie2.id)"
               style="cursor: pointer"
             >
               <div class="card p-2">
@@ -601,7 +601,7 @@
               v-for="(movie3, key) in movies3"
               :key="key"
               class="col-sm-12 col-md-6 col-lg-4 mx-auto my-2"
-              @click="mostrar(movie.id)"
+              @click="mostrar(movie3.id)"
               style="cursor: pointer"
             >
               <div class="card p-2">
@@ -623,7 +623,7 @@
               v-for="(movie4, key) in movies4"
               :key="key"
               class="col-sm-12 col-md-6 col-lg-4 mx-auto my-2"
-              @click="mostrar(movie.id)"
+              @click="mostrar(movie4.id)"
               style="cursor: pointer"
             >
               <div class="card p-2">

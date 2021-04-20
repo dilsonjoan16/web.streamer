@@ -381,7 +381,8 @@
               <div class="copyright-menu">
                 <ul>
                   <li>
-                    <a href="#">Home</a>
+                    <router-link to="/">Home</router-link>
+                    <!--<a href="#">Home</a>-->
                   </li>
                   <li>
                     <a href="#">Terms</a>
@@ -390,7 +391,8 @@
                     <a href="#">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="#">Contact</a>
+                    <router-link to="/about">Contact</router-link>
+                    <!--<a href="#">Contact</a>-->
                   </li>
                 </ul>
               </div>

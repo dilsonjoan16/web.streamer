@@ -734,16 +734,18 @@
               <div class="copyright-menu">
                 <ul>
                   <li>
-                    <a href="#">Home</a>
-                  </li>
-                  <li>
-                    <a href="#">Terms</a>
-                  </li>
-                  <li>
-                    <a href="#">Privacy Policy</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact</a>
+                    <router-link to="/">Home</router-link>
+                    <!--<a href="#">Home</a>-->
+                    </li>
+                    <li>
+                      <a href="#">Terms</a>
+                    </li>
+                    <li>
+                      <a href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <router-link to="/about">Contact</router-link>
+                      <!--<a href="#">Contact</a>-->
                   </li>
                 </ul>
               </div>
@@ -770,6 +772,10 @@
   </div>
 </template>
 <script>
+let baseurl = "https://api.themoviedb.org/3/movie/"
+let popular = "top_rated?"
+let apikey = "api_key=9cce8ac649022e53376ee7864fe9a772"
+let lenguage = "&language=en-US"
 import axios from "axios";
 export default {
   name: "BestMovies2",
@@ -785,7 +791,7 @@ export default {
   methods: {
     async getmovies() {
       const response = await axios.get(
-        "https://api.themoviedb.org/3/movie/top_rated?api_key=9cce8ac649022e53376ee7864fe9a772&language=en-US",
+        `${baseurl}${popular}${apikey}${lenguage}`,
         {
           params: {
             page: 1,
@@ -797,7 +803,7 @@ export default {
     },
     async getmovies2() {
       const response = await axios.get(
-        "https://api.themoviedb.org/3/movie/top_rated?api_key=9cce8ac649022e53376ee7864fe9a772&language=en-US",
+        `${baseurl}${popular}${apikey}${lenguage}`,
         {
           params: {
             page: 2,
@@ -809,7 +815,7 @@ export default {
     },
     async getmovies3() {
       const response = await axios.get(
-        "https://api.themoviedb.org/3/movie/top_rated?api_key=9cce8ac649022e53376ee7864fe9a772&language=en-US",
+        `${baseurl}${popular}${apikey}${lenguage}`,
         {
           params: {
             page: 3,
@@ -821,7 +827,7 @@ export default {
     },
     async getmovies4() {
       const response = await axios.get(
-        "https://api.themoviedb.org/3/movie/top_rated?api_key=9cce8ac649022e53376ee7864fe9a772&language=en-US",
+        `${baseurl}${popular}${apikey}${lenguage}`,
         {
           params: {
             page: 4,
